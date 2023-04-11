@@ -14,6 +14,7 @@ Beyond that, it allows us to have one connection/publisher -> many consumers, in
 graph LR
     A(Farcaster Hub) --> B(Orion Service)
     B --> C(SQS Queue)
+    C --> D(Any Consumer)
 ```
 
 ## Contributing
