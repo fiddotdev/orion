@@ -30,7 +30,13 @@ const queueUrl = envConfig.hubURL;
 
   // Subscribe to all types of messages
   const subscribeResult = await client.subscribe({
-    eventTypes: [HubEventType.MERGE_MESSAGE],
+    eventTypes: [
+      HubEventType.MERGE_MESSAGE,
+      HubEventType.PRUNE_MESSAGE,
+      HubEventType.REVOKE_MESSAGE,
+      HubEventType.MERGE_NAME_REGISTRY_EVENT,
+      HubEventType.MERGE_ID_REGISTRY_EVENT,
+    ],
   });
 
   // Make sure we were able to successfully subscribe
