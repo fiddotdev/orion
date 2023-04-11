@@ -16,4 +16,13 @@ graph LR
     B --> C(SQS Queue)
 ```
 
+## Contributing
+This is more of an internal service, but building in public is the name of the game, so it's open-sourced.
 
+If you'd like to contribute, please open up an issue before working on anything.
+
+If a feature request/bug fix/etc.. has been approved, please fork this repo, clone it, and switch to a new branch clearly outlining what your feature does.
+
+Along with that, please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for both your commits & PR title
+
+We don't have a PR template at the moment, so for now just explain what you did, which issue it resolves, etc...
