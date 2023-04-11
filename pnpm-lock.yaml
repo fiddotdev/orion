@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@farcaster/fishery':
+    specifier: ^2.2.3
+    version: 2.2.3
   '@farcaster/hub-nodejs':
     specifier: ^0.6.3
     version: 0.6.3
@@ -244,6 +247,12 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: false
+
+  /@farcaster/fishery@2.2.3:
+    resolution: {integrity: sha512-BFiDZQYO6pGaJ6GKlei4AO6xAM6yvi9YUOcc1fVBeuirnkjr81xunj7i5wmvBuxwKsbm8c/g91EAloQg+zCm7g==}
+    dependencies:
+      lodash.mergewith: 4.6.2
     dev: false
 
   /@farcaster/hub-nodejs@0.6.3:
@@ -1684,6 +1693,10 @@ packages:
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
+
+  /lodash.mergewith@4.6.2:
+    resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
+    dev: false
 
   /long@4.0.0:
     resolution: {integrity: sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==}

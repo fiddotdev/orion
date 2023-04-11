@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Orion is our internal service that takes events and messages from our Farcaster nodes, and pushes them into our SQS queues.",
 	"main": "dist/index.js",
-	"author": "Your Name <your.email@example.com>",
+	"author": "Landon Boles <landon@withportals.xyz>",
 	"license": "MIT",
 	"scripts": {
 		"dev": "ts-node-dev --exit-child src/index.ts",
@@ -27,6 +27,7 @@
 		"typescript": "^5.0.4"
 	},
 	"dependencies": {
+		"@farcaster/fishery": "^2.2.3",
 		"@farcaster/hub-nodejs": "^0.6.3",
 		"@types/node": "^18.15.11",
 		"aws-sdk": "^2.1354.0",
