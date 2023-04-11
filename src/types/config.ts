@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
 export type EnvConfig = {
@@ -7,7 +7,7 @@ export type EnvConfig = {
   sqsRegion: string;
   hubURL: string;
   hubSecure: boolean;
-}
+};
 
 console.log(process.env.HUB_SECURE);
 const envConfig: EnvConfig = {
@@ -15,21 +15,23 @@ const envConfig: EnvConfig = {
   sqsAPIVersion: process.env.SQS_API_VERSION ?? '',
   sqsRegion: process.env.SQS_REGION ?? '',
   hubURL: process.env.HUB_URL ?? '',
-  hubSecure: process.env.HUB_SECURE === "true",
-}
+  hubSecure: process.env.HUB_SECURE === 'true',
+};
 
 function validateConfig(config: EnvConfig) {
   const missingVars: string[] = [];
 
   for (const [key, value] of Object.entries(config)) {
-    if (typeof value === "undefined" || value === "") {
+    if (typeof value === 'undefined' || value === '') {
       missingVars.push(key);
     }
   }
 
   if (missingVars.length) {
     throw new Error(
-      `The following environment variables are not set: ${missingVars.join(", ")}`
+      `The following environment variables are not set: ${missingVars.join(
+        ', ',
+      )}`,
     );
   }
 }

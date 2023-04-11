@@ -2,12 +2,12 @@ import {
   getInsecureHubRpcClient,
   getSSLHubRpcClient,
   HubEventType,
-  HubRpcClient
-} from "@farcaster/hub-nodejs";
+  HubRpcClient,
+} from '@farcaster/hub-nodejs';
 import AWS from 'aws-sdk';
 import { SendMessageResult } from 'aws-sdk/clients/sqs';
 import dotenv from 'dotenv';
-import envConfig from "./types/config";
+import envConfig from './types/config';
 
 dotenv.config();
 // Set the AWS region
@@ -22,11 +22,10 @@ const queueUrl = envConfig.hubURL;
 (async () => {
   // Subscribe to our Farcaster Client
   let client: HubRpcClient;
-  if(envConfig.hubSecure) {
-    client = getSSLHubRpcClient(envConfig.hubURL)
-  }
-  else {
-    client = getInsecureHubRpcClient(envConfig.hubURL)
+  if (envConfig.hubSecure) {
+    client = getSSLHubRpcClient(envConfig.hubURL);
+  } else {
+    client = getInsecureHubRpcClient(envConfig.hubURL);
   }
 
   // Subscribe to all types of messages
@@ -44,10 +43,10 @@ const queueUrl = envConfig.hubURL;
       // Upload our event to our SQS stream
       // For context: event is an object.
       sendToSQSQueue(event)
-        .then((response) => {
+        .then(response => {
           console.log(`Message sent to SQS queue: ${response.MessageId}`);
         })
-        .catch((error) => {
+        .catch(error => {
           console.error('Failed to send message to SQS queue:', error);
         });
     }
