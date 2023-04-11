@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules
+
+# Build output
+dist
+
+# IDE and editor files
+.vscode
+.idea
+*.suo
+*.user
+*.bak
+*.swp
+*.swx
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+*.seed
+
+# Cache and local files
+.cache
+*.cache
+
+# Operating system files
+.DS_Store
+Thumbs.db
+*.db
+
+# pnpm specific
+.pnpm
